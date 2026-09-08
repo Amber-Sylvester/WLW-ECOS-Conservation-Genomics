@@ -75,3 +75,37 @@
 - ; = Separate two cmd's written on a single line
 - do = The code that you want to execute in a loop
 - done = Ends a loop
+## Accessing Remote Computers
+### SSH (Secure Shell)
+#### - SSH = Secure Shell
+- It is the main protocol used to access remote computers/servers.
+- SSH creates an encrypted connection between your computer and the remote computer.
+- You usually log in using:
+  - Username
+  - Password
+  - Sometimes two-factor authentication (2FA).
+Basic SSH command: ssh username@remote-server
+### Remote Computing Clusters
+The material discusses three main clusters:
+#### - Hummingbird (UCSC)
+  - Available to UCSC users with a UCSC Blue username/password.
+  - If you're off campus, you need the UCSC VPN.
+  - Uses tcsh by default.
+  - You can configure it to automatically switch to bash.
+#### - Alpine/Summit
+  - Requires an appropriate university account.
+  - Uses Duo for two-factor authentication.
+  - You can create an alias to make logging in easier.
+#### - Sedna (NMFS)
+  - Only available to authorized NMFS employees.
+  - Must be on the NMFS network or connected through VPN.
+  - Example: username@sedna.nwfsc2.noaa.gov
+### Windows
+- Windows users can use SSH through Git Bash
+- PuTTY is recommended as a dedicated SSH/terminal program
+- MobaXterm is another option for connecting to remote servers
+### Hummingbird Configuration
+- Hummingbird uses tcsh instead of bash by default
+### Alpine Login Shortcut
+- You can create an alias in .bashrc: alias summit='ssh username@remote-server'
+- You only need to type summit instead of the full SSH cmd
