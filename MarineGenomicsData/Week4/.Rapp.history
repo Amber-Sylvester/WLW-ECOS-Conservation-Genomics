@@ -1,0 +1,111 @@
+2 + 2
+2 + 2
+x <- 5
+x
+x#
+y
+y
+x#
+y
+y <- "hello"
+x <- 5
+x
+x
+x
+z
+x
+x <- c (1, 2, 3, 4, 5)
+x
+x
+x
+x
+x
+x
+1:10
+y
+y
+y
+y
+y <- c ("dog", "cat", "dolphin")
+y
+y
+y
+x
+summary(x)
+length(x)
+x[1]
+x[3]
+x[3]
+x + 2
+x * 2
+mean(x)
+x^2
+x + y
+y <- c (10, 20, 30, 40, 50)
+x + y
+x * y
+?mean
+rm(y)
+ls
+ls()
+data(msleep)
+library("ggplot2")
+library(ggplot2)
+library(ggplot2)
+install.packages("ggplot2")
+library("ggplot2")
+data(msleep)
+head(msleep)
+tail(msleep)
+str(msleep)
+dim(msleep)
+ncol(msleep)
+nrow(msleep)
+colnames(msleep)
+rownames(msleep)
+View(msleep)
+msleep[1,1]
+msleep[1,1]
+msleep [,1]
+msleep[1,]
+msleep$name
+msleep$name
+msleep[,1]
+class(msleep$name)
+msleep [1,]
+msleep ["Cheetah",]
+msleep[,c("name","sleep_total")]
+sleep_data <- msleep[,c("name","sleep_total")]
+sleep_data
+unique(msleep$vore)
+table(msleep$voore)
+table(msleep$vore)
+levels(msleep$vore)
+t(msleep[1:5,1:5])
+class(msleep$sleep_total)
+str(msleep)
+mean(msleep$sleep_total)
+max(msleep$sleep_total)
+min(msleep$sleep_total)
+summary(msleep$sleep_total)
+msleep$sleep_ratio <- msleep$sleep_total / msleep$sleep_rem
+msleep$sleep_ratio
+head(msleep)
+class(TRUE)
+sum(c(TRUE, FALSE, TRUE, TRUE))
+5 ==5
+5 != 3
+5 > 3
+5 < 3
+5 > 3 & 5 < 10
+5 > 3 | 5 < 2
+!TRUE
+!FALSE
+(1:10) > 3
+(1:10)[(1:10) > 3]
+sum((1:10) > 3)
+msleep$name[msleep$sleep_total > 18]
+which(msleep$sleep_total > 18)
+length(which(msleep$sleep_total >18))
+msleep$name[which(msleep$sleep_total > 18)]
+msleep$name[msleep$order == "Chiroptera" & msleep$sleep_total > 18]

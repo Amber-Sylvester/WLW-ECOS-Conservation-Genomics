@@ -1,0 +1,149 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(ggplot2)
+```
+```{r}
+setwd("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics")
+```
+```{r}
+list.files("data")
+```
+```{r}
+sites <- read.csv("data/4545056/CommonScriptsAndData/sampling_sites_env.csv")
+samples <- read.csv("data/4545056/CommonScriptsAndData/site-sample.csv")
+```
+```{r}
+load("data/4545056/ScriptsAndData/AMData/fSNPS.rda")
+load("data/4545056/ScriptsAndData/AMData/QS.CRWBA.rda")
+load("data/4545056/ScriptsAndData/AMData/reef.rda")
+```
+```{r}
+dim(fSNPS)
+```
+```{r}
+names(QS.CRWBA)[which.min(QS.CRWBA)]
+```
+```{r}
+heat_snp <- fSNPS[, "39061200|F|0-35:G>C-35:G>C"]
+```
+```{r}
+unique(heat_snp)
+```
+```{r}
+heat_data <- data.frame(
+  coral = names(reef),
+  site = as.character(reef),
+  genotype = heat_snp
+)
+
+heat_data$BAF <- sites$CRW.BA[match(heat_data$site, sites$SiteID)]
+```
+```{r}
+head(heat_data)
+```
+```{r}
+ggplot(heat_data, aes(x = factor(genotype), y = BAF)) +
+  geom_boxplot() +
+  labs(
+    x = "Genotype",
+    y = "Bleaching Alert Frequency (BAF)"
+  )
+```
+The BAF values varied among the three genotype groups. Genotype 1 appeared to have the highest BAF values overall, while genotype 2 appeared to have the lowest. The ranges also overlapped between the groups.
+
+```{r}
+site_data <- aggregate(
+  genotype ~ site,
+  data = heat_data,
+  FUN = function(x) sum(x) / (2 * length(x))
+)
+
+site_data$BAF <- sites$CRW.BA[
+  match(site_data$site, sites$SiteID)
+]
+```
+```{r}
+ggplot(site_data, aes(x = BAF, y = genotype)) +
+  geom_point() +
+  labs(
+    x = "Bleaching Alert Frequency (BAF)",
+    y = "Allele Frequency"
+  )
+```
+The plot shows a generally negative relationship between BAF and allele frequency, with allele frequency tending to decrease as BAF increases. However, the points are fairly spread out, so the relationship does not appear to be very consistent across all sampling sites.
+
+```{r}
+ggplot(site_data, aes(x = site, y = genotype)) +
+  geom_col() +
+  labs(
+    x = "Sampling Site",
+    y = "Allele Frequency"
+  )
+```
+Allele frequency varied among the different sampling sites. Some sites had relatively high allele frequencies, while others had much lower frequencies, showing variation in the heat-associated SNP across locations.
+
+```{r}
+names(QS.CRWBA)[which.max(QS.CRWBA)]
+```
+```{r}
+random_snp <- fSNPS[, "39068481|F|0-5:T>A-5:T>A"]
+
+unique(random_snp)
+```
+```{r}
+random_data <- data.frame(
+  coral = names(reef),
+  site = as.character(reef),
+  genotype = random_snp
+)
+
+random_data$BAF <- sites$CRW.BA[
+  match(random_data$site, sites$SiteID)
+]
+```
+```{r}
+ggplot(random_data, aes(x = factor(genotype), y = BAF)) +
+  geom_boxplot() +
+  labs(
+    x = "Genotype",
+    y = "Bleaching Alert Frequency (BAF)"
+  )
+```
+The BAF values were fairly similar across the three genotype groups. The groups showed substantial overlap, with no clear difference in BAF between the genotypes.
+
+```{r}
+random_site_data <- aggregate(
+  genotype ~ site,
+  data = random_data,
+  FUN = function(x) sum(x) / (2 * length(x))
+)
+
+random_site_data$BAF <- sites$CRW.BA[
+  match(random_site_data$site, sites$SiteID)
+]
+```
+```{r}
+ggplot(random_site_data, aes(x = BAF, y = genotype)) +
+  geom_point() +
+  labs(
+    x = "Bleaching Alert Frequency (BAF)",
+    y = "Allele Frequency"
+  )
+```
+The random SNP shows a scattered relationship between BAF and allele frequency. Allele frequency varies across the range of BAF values, with no clear overall trend.
+
+```{r}
+ggplot(random_site_data, aes(x = site, y = genotype)) +
+  geom_col() +
+  labs(
+    x = "Sampling Site",
+    y = "Allele Frequency"
+  )
+```
+Allele frequency varied among the sampling sites, but most sites had allele frequencies between about 0.3 and 0.45. A few sites had higher allele frequencies, with site 16a having the highest value.
+
+

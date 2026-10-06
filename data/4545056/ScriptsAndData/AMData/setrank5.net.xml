@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <key id="v_description" for="node" attr.name="description" attr.type="string"/>
+  <key id="v_database" for="node" attr.name="database" attr.type="string"/>
+  <key id="v_pValue" for="node" attr.name="pValue" attr.type="double"/>
+  <key id="v_pp" for="node" attr.name="pp" attr.type="double"/>
+  <key id="v_size" for="node" attr.name="size" attr.type="double"/>
+  <key id="v_nSignificant" for="node" attr.name="nSignificant" attr.type="double"/>
+  <key id="v_setRank" for="node" attr.name="setRank" attr.type="double"/>
+  <key id="v_pSetRank" for="node" attr.name="pSetRank" attr.type="double"/>
+  <key id="v_correctedPValue" for="node" attr.name="correctedPValue" attr.type="double"/>
+  <key id="v_adjustedPValue" for="node" attr.name="adjustedPValue" attr.type="double"/>
+  <key id="e_type" for="edge" attr.name="type" attr.type="string"/>
+  <key id="e_source_pDiff" for="edge" attr.name="source_pDiff" attr.type="double"/>
+  <key id="e_source_ppDiff" for="edge" attr.name="source_ppDiff" attr.type="double"/>
+  <key id="e_source_diffSize" for="edge" attr.name="source_diffSize" attr.type="double"/>
+  <key id="e_sink_pDiff" for="edge" attr.name="sink_pDiff" attr.type="double"/>
+  <key id="e_sink_ppDiff" for="edge" attr.name="sink_ppDiff" attr.type="double"/>
+  <key id="e_sink_diffSize" for="edge" attr.name="sink_diffSize" attr.type="double"/>
+  <key id="e_deltaP" for="edge" attr.name="deltaP" attr.type="double"/>
+  <key id="e_intersectionSize" for="edge" attr.name="intersectionSize" attr.type="double"/>
+  <key id="e_pIntersection" for="edge" attr.name="pIntersection" attr.type="double"/>
+  <key id="e_ppIntersection" for="edge" attr.name="ppIntersection" attr.type="double"/>
+  <key id="e_jaccard" for="edge" attr.name="jaccard" attr.type="double"/>
+  <key id="e_significantJaccard" for="edge" attr.name="significantJaccard" attr.type="double"/>
+  <key id="e_discardSource" for="edge" attr.name="discardSource" attr.type="boolean"/>
+  <key id="e_discardSink" for="edge" attr.name="discardSink" attr.type="boolean"/>
+  <graph id="G" edgedefault="directed">
+    <node id="n0">
+      <data key="v_name">GO:0031995</data>
+      <data key="v_description">insulin-like growth factor II binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.000896592946802333</data>
+      <data key="v_pp">3.04740468190663</data>
+      <data key="v_size">1</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.033500837520938</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.000896592946802333</data>
+      <data key="v_adjustedPValue">0.0233114166168606</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">GO:0034649</data>
+      <data key="v_description">histone demethylase activity (H3-monomethyl-K4 specific)</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00101336892901146</data>
+      <data key="v_pp">2.99423241578024</data>
+      <data key="v_size">6</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.033500837520938</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00101336892901146</data>
+      <data key="v_adjustedPValue">0.0253342232252865</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">GO:0051087</data>
+      <data key="v_description">chaperone binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.000593769057874147</data>
+      <data key="v_pp">3.22638243783571</data>
+      <data key="v_size">107</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.033500837520938</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.000593769057874147</data>
+      <data key="v_adjustedPValue">0.016031764562602</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">GO:0071949</data>
+      <data key="v_description">FAD binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">3.21481373872432e-05</data>
+      <data key="v_pp">2.06217585995123</data>
+      <data key="v_size">43</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.033500837520938</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00866610885785019</data>
+      <data key="v_adjustedPValue">0.0253342232252865</data>
+    </node>
+    <edge source="n1" target="n3">
+      <data key="e_type">subset</data>
+      <data key="e_source_pDiff">1</data>
+      <data key="e_source_ppDiff">-0</data>
+      <data key="e_source_diffSize">0</data>
+      <data key="e_sink_pDiff">0.00866610885785019</data>
+      <data key="e_sink_ppDiff">2.06217585995123</data>
+      <data key="e_sink_diffSize">37</data>
+      <data key="e_deltaP">2.06217585995123</data>
+      <data key="e_intersectionSize">6</data>
+      <data key="e_pIntersection">0.00101336892901146</data>
+      <data key="e_ppIntersection">2.99423241578024</data>
+      <data key="e_jaccard">0.13953488372093</data>
+      <data key="e_significantJaccard">0.13953488372093</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+  </graph>
+</graphml>

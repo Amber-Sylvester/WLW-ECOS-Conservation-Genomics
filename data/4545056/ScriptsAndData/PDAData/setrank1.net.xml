@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <key id="v_description" for="node" attr.name="description" attr.type="string"/>
+  <key id="v_database" for="node" attr.name="database" attr.type="string"/>
+  <key id="v_pValue" for="node" attr.name="pValue" attr.type="double"/>
+  <key id="v_pp" for="node" attr.name="pp" attr.type="double"/>
+  <key id="v_size" for="node" attr.name="size" attr.type="double"/>
+  <key id="v_nSignificant" for="node" attr.name="nSignificant" attr.type="double"/>
+  <key id="v_setRank" for="node" attr.name="setRank" attr.type="double"/>
+  <key id="v_pSetRank" for="node" attr.name="pSetRank" attr.type="double"/>
+  <key id="v_correctedPValue" for="node" attr.name="correctedPValue" attr.type="double"/>
+  <key id="v_adjustedPValue" for="node" attr.name="adjustedPValue" attr.type="double"/>
+  <key id="e_type" for="edge" attr.name="type" attr.type="string"/>
+  <key id="e_source_pDiff" for="edge" attr.name="source_pDiff" attr.type="double"/>
+  <key id="e_source_ppDiff" for="edge" attr.name="source_ppDiff" attr.type="double"/>
+  <key id="e_source_diffSize" for="edge" attr.name="source_diffSize" attr.type="double"/>
+  <key id="e_sink_pDiff" for="edge" attr.name="sink_pDiff" attr.type="double"/>
+  <key id="e_sink_ppDiff" for="edge" attr.name="sink_ppDiff" attr.type="double"/>
+  <key id="e_sink_diffSize" for="edge" attr.name="sink_diffSize" attr.type="double"/>
+  <key id="e_deltaP" for="edge" attr.name="deltaP" attr.type="double"/>
+  <key id="e_intersectionSize" for="edge" attr.name="intersectionSize" attr.type="double"/>
+  <key id="e_pIntersection" for="edge" attr.name="pIntersection" attr.type="double"/>
+  <key id="e_ppIntersection" for="edge" attr.name="ppIntersection" attr.type="double"/>
+  <key id="e_jaccard" for="edge" attr.name="jaccard" attr.type="double"/>
+  <key id="e_significantJaccard" for="edge" attr.name="significantJaccard" attr.type="double"/>
+  <key id="e_discardSource" for="edge" attr.name="discardSource" attr.type="boolean"/>
+  <key id="e_discardSink" for="edge" attr.name="discardSink" attr.type="boolean"/>
+  <graph id="G" edgedefault="directed">
+    <node id="n0">
+      <data key="v_name">GO:0001784</data>
+      <data key="v_description">phosphotyrosine residue binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00258791301922074</data>
+      <data key="v_pp">3.74818471682223</data>
+      <data key="v_size">25</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00017857278964452</data>
+      <data key="v_adjustedPValue">0.00375002858253492</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">GO:0003831</data>
+      <data key="v_description">beta-N-acetylglucosaminylglycopeptide beta-1,4-galactosyltransferase activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00578718536784204</data>
+      <data key="v_pp">2.23753260663911</data>
+      <data key="v_size">6</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00578718536784204</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">GO:0004096</data>
+      <data key="v_description">catalase activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00117484047228319</data>
+      <data key="v_pp">2.9300211008056</data>
+      <data key="v_size">19</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00117484047228319</data>
+      <data key="v_adjustedPValue">0.0211471285010975</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">GO:0004966</data>
+      <data key="v_description">galanin receptor activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00888444994588899</data>
+      <data key="v_pp">2.05136945506858</data>
+      <data key="v_size">18</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00888444994588899</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">GO:0005031</data>
+      <data key="v_description">tumor necrosis factor-activated receptor activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.0019788913896337</data>
+      <data key="v_pp">2.70357804115346</data>
+      <data key="v_size">6</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.0019788913896337</data>
+      <data key="v_adjustedPValue">0.0257255880652381</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">GO:0005230</data>
+      <data key="v_description">extracellular ligand-gated ion channel activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00122265254251795</data>
+      <data key="v_pp">2.91269694468619</data>
+      <data key="v_size">8</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00122265254251795</data>
+      <data key="v_adjustedPValue">0.0211471285010975</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">GO:0005332</data>
+      <data key="v_description">gamma-aminobutyric acid:sodium symporter activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00170709214206345</data>
+      <data key="v_pp">2.7677430367589</data>
+      <data key="v_size">11</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00170709214206345</data>
+      <data key="v_adjustedPValue">0.0256063821309518</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">GO:0005516</data>
+      <data key="v_description">calmodulin binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00118522296105828</data>
+      <data key="v_pp">2.30785866645136</data>
+      <data key="v_size">180</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00492199687406469</data>
+      <data key="v_adjustedPValue">0.0195246726590804</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">GO:0008139</data>
+      <data key="v_description">nuclear localization sequence binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.0017744726555139</data>
+      <data key="v_pp">2.08364592769557</data>
+      <data key="v_size">14</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0625052304122864</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00824810293632483</data>
+      <data key="v_adjustedPValue">0.00776062455127694</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">GO:0008233</data>
+      <data key="v_description">peptidase activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00769696513930574</data>
+      <data key="v_pp">2.11368048042005</data>
+      <data key="v_size">116</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00769696513930574</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">GO:0008536</data>
+      <data key="v_description">Ran GTPase binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00212811082656046</data>
+      <data key="v_pp">3.4111333223106</data>
+      <data key="v_size">20</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.102552633578718</data>
+      <data key="v_pSetRank">0.0179420086559656</data>
+      <data key="v_correctedPValue">0.000388031227563847</data>
+      <data key="v_adjustedPValue">0.00776062455127694</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">GO:0009374</data>
+      <data key="v_description">biotin binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00773597844757617</data>
+      <data key="v_pp">2.11148474886712</data>
+      <data key="v_size">22</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00773597844757617</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n12">
+      <data key="v_name">GO:0015280</data>
+      <data key="v_description">ligand-gated sodium channel activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00325020660446039</data>
+      <data key="v_pp">2.48808903153645</data>
+      <data key="v_size">34</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00325020660446039</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n13">
+      <data key="v_name">GO:0019864</data>
+      <data key="v_description">IgG binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00759593639517148</data>
+      <data key="v_pp">2.11941868049922</data>
+      <data key="v_size">13</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00759593639517148</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n14">
+      <data key="v_name">GO:0030544</data>
+      <data key="v_description">Hsp70 protein binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.0018284684100024</data>
+      <data key="v_pp">2.73791253845974</data>
+      <data key="v_size">47</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.0018284684100024</data>
+      <data key="v_adjustedPValue">0.0256063821309518</data>
+    </node>
+    <node id="n15">
+      <data key="v_name">GO:0031433</data>
+      <data key="v_description">telethonin binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00299541238610601</data>
+      <data key="v_pp">2.52354337872331</data>
+      <data key="v_size">9</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00299541238610601</data>
+      <data key="v_adjustedPValue">0.0195246726590804</data>
+    </node>
+    <node id="n16">
+      <data key="v_name">GO:0031628</data>
+      <data key="v_description">opioid receptor binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.0031577496738861</data>
+      <data key="v_pp">2.5006223010405</data>
+      <data key="v_size">65</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.0031577496738861</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n17">
+      <data key="v_name">GO:0031699</data>
+      <data key="v_description">beta-3 adrenergic receptor binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00329924117452973</data>
+      <data key="v_pp">2.48158593636764</data>
+      <data key="v_size">6</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00329924117452973</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n18">
+      <data key="v_name">GO:0043565</data>
+      <data key="v_description">sequence-specific DNA binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00237869117114336</data>
+      <data key="v_pp">2.62366193937281</data>
+      <data key="v_size">320</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00237869117114336</data>
+      <data key="v_adjustedPValue">0.0285442940537204</data>
+    </node>
+    <node id="n19">
+      <data key="v_name">GO:0048487</data>
+      <data key="v_description">beta-tubulin binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00342060076023164</data>
+      <data key="v_pp">2.46589761208987</data>
+      <data key="v_size">24</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00342060076023164</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n20">
+      <data key="v_name">GO:0051015</data>
+      <data key="v_description">actin filament binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.000216686333528646</data>
+      <data key="v_pp">2.98816983950704</data>
+      <data key="v_size">138</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0569453622715813</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00102761435047792</data>
+      <data key="v_adjustedPValue">0.0195246726590804</data>
+    </node>
+    <node id="n21">
+      <data key="v_name">GO:0051019</data>
+      <data key="v_description">mitogen-activated protein kinase binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00750178959447363</data>
+      <data key="v_pp">3.74818471682223</data>
+      <data key="v_size">26</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0569453622715813</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00017857278964452</data>
+      <data key="v_adjustedPValue">0.00375002858253492</data>
+    </node>
+    <node id="n22">
+      <data key="v_name">GO:0051087</data>
+      <data key="v_description">chaperone binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00154753643476729</data>
+      <data key="v_pp">2.81035911727902</data>
+      <data key="v_size">75</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00154753643476729</data>
+      <data key="v_adjustedPValue">0.0247605829562766</data>
+    </node>
+    <node id="n23">
+      <data key="v_name">GO:0051393</data>
+      <data key="v_description">alpha-actinin binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00342063964017971</data>
+      <data key="v_pp">2.46589267574911</data>
+      <data key="v_size">27</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00342063964017971</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n24">
+      <data key="v_name">GO:0051879</data>
+      <data key="v_description">Hsp90 protein binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00475417661169166</data>
+      <data key="v_pp">2.32292468881347</data>
+      <data key="v_size">30</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00475417661169166</data>
+      <data key="v_adjustedPValue">0.0347352464127471</data>
+    </node>
+    <node id="n25">
+      <data key="v_name">GO:0061608</data>
+      <data key="v_description">nuclear import signal receptor activity</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.000960291040714787</data>
+      <data key="v_pp">2.08364592769557</data>
+      <data key="v_size">12</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0438633195875694</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00824810293632483</data>
+      <data key="v_adjustedPValue">0.00776062455127694</data>
+    </node>
+    <node id="n26">
+      <data key="v_name">GO:0061676</data>
+      <data key="v_description">importin-alpha family protein binding</data>
+      <data key="v_database">GOmf</data>
+      <data key="v_pValue">0.00824810293632483</data>
+      <data key="v_pp">2.08364592769557</data>
+      <data key="v_size">7</data>
+      <data key="v_nSignificant">0</data>
+      <data key="v_setRank">0.0307812769035575</data>
+      <data key="v_pSetRank">1</data>
+      <data key="v_correctedPValue">0.00824810293632483</data>
+      <data key="v_adjustedPValue">0.00776062455127694</data>
+    </node>
+    <edge source="n0" target="n21">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">0.618391512424132</data>
+      <data key="e_source_ppDiff">0.208736479847591</data>
+      <data key="e_source_diffSize">21</data>
+      <data key="e_sink_pDiff">0.0492976969010825</data>
+      <data key="e_sink_ppDiff">1.30717336969874</data>
+      <data key="e_sink_diffSize">22</data>
+      <data key="e_deltaP">1.09843688985114</data>
+      <data key="e_intersectionSize">4</data>
+      <data key="e_pIntersection">0.00017857278964452</data>
+      <data key="e_ppIntersection">3.74818471682223</data>
+      <data key="e_jaccard">0.0851063829787234</data>
+      <data key="e_significantJaccard">0.0851063829787234</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n7" target="n20">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">0.0840540096768099</data>
+      <data key="e_source_ppDiff">1.07544156433067</data>
+      <data key="e_source_diffSize">140</data>
+      <data key="e_sink_pDiff">0.0405921423958113</data>
+      <data key="e_sink_ppDiff">1.39155802662987</data>
+      <data key="e_sink_diffSize">98</data>
+      <data key="e_deltaP">0.316116462299195</data>
+      <data key="e_intersectionSize">40</data>
+      <data key="e_pIntersection">0.000381882017740972</data>
+      <data key="e_ppIntersection">3.41807079142961</data>
+      <data key="e_jaccard">0.143884892086331</data>
+      <data key="e_significantJaccard">0.143884892086331</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n15" target="n7">
+      <data key="e_type">subset</data>
+      <data key="e_source_pDiff">1</data>
+      <data key="e_source_ppDiff">-0</data>
+      <data key="e_source_diffSize">0</data>
+      <data key="e_sink_pDiff">0.00492199687406469</data>
+      <data key="e_sink_ppDiff">2.30785866645136</data>
+      <data key="e_sink_diffSize">171</data>
+      <data key="e_deltaP">2.30785866645136</data>
+      <data key="e_intersectionSize">9</data>
+      <data key="e_pIntersection">0.00299541238610601</data>
+      <data key="e_ppIntersection">2.52354337872331</data>
+      <data key="e_jaccard">0.05</data>
+      <data key="e_significantJaccard">0.05</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n15" target="n20">
+      <data key="e_type">subset</data>
+      <data key="e_source_pDiff">1</data>
+      <data key="e_source_ppDiff">-0</data>
+      <data key="e_source_diffSize">0</data>
+      <data key="e_sink_pDiff">0.00102761435047792</data>
+      <data key="e_sink_ppDiff">2.98816983950704</data>
+      <data key="e_sink_diffSize">129</data>
+      <data key="e_deltaP">2.98816983950704</data>
+      <data key="e_intersectionSize">9</data>
+      <data key="e_pIntersection">0.00299541238610601</data>
+      <data key="e_ppIntersection">2.52354337872331</data>
+      <data key="e_jaccard">0.0652173913043478</data>
+      <data key="e_significantJaccard">0.0652173913043478</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n8" target="n10">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">0.699245198474522</data>
+      <data key="e_source_ppDiff">0.155370507127589</data>
+      <data key="e_source_diffSize">10</data>
+      <data key="e_sink_pDiff">0.0165932023695373</data>
+      <data key="e_sink_ppDiff">1.7800697901537</data>
+      <data key="e_sink_diffSize">16</data>
+      <data key="e_deltaP">1.62469928302611</data>
+      <data key="e_intersectionSize">4</data>
+      <data key="e_pIntersection">0.000195002366293646</data>
+      <data key="e_ppIntersection">3.70996011857575</data>
+      <data key="e_jaccard">0.133333333333333</data>
+      <data key="e_significantJaccard">0.133333333333333</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n25" target="n8">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">1</data>
+      <data key="e_source_ppDiff">-0</data>
+      <data key="e_source_diffSize">5</data>
+      <data key="e_sink_pDiff">0.908858824098482</data>
+      <data key="e_sink_ppDiff">0.041503571867853</data>
+      <data key="e_sink_diffSize">7</data>
+      <data key="e_deltaP">0.041503571867853</data>
+      <data key="e_intersectionSize">7</data>
+      <data key="e_pIntersection">0.000643447458928535</data>
+      <data key="e_ppIntersection">3.19148690987693</data>
+      <data key="e_jaccard">0.368421052631579</data>
+      <data key="e_significantJaccard">0.368421052631579</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n26" target="n8">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">1</data>
+      <data key="e_source_ppDiff">-0</data>
+      <data key="e_source_diffSize">6</data>
+      <data key="e_sink_pDiff">0.054180220690632</data>
+      <data key="e_sink_ppDiff">1.26615923030085</data>
+      <data key="e_sink_diffSize">13</data>
+      <data key="e_deltaP">1.26615923030085</data>
+      <data key="e_intersectionSize">1</data>
+      <data key="e_pIntersection">0.00824810293632483</data>
+      <data key="e_ppIntersection">2.08364592769557</data>
+      <data key="e_jaccard">0.05</data>
+      <data key="e_significantJaccard">0.05</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n25" target="n10">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">0.462741114098213</data>
+      <data key="e_source_ppDiff">0.334661912143216</data>
+      <data key="e_source_diffSize">6</data>
+      <data key="e_sink_pDiff">0.0177824528890453</data>
+      <data key="e_sink_ppDiff">1.75000833320257</data>
+      <data key="e_sink_diffSize">14</data>
+      <data key="e_deltaP">1.41534642105935</data>
+      <data key="e_intersectionSize">6</data>
+      <data key="e_pIntersection">0.000388031227563847</data>
+      <data key="e_ppIntersection">3.4111333223106</data>
+      <data key="e_jaccard">0.230769230769231</data>
+      <data key="e_significantJaccard">0.230769230769231</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+    <edge source="n26" target="n25">
+      <data key="e_type">intersection</data>
+      <data key="e_source_pDiff">1</data>
+      <data key="e_source_ppDiff">-0</data>
+      <data key="e_source_diffSize">6</data>
+      <data key="e_sink_pDiff">0.0389941945983362</data>
+      <data key="e_sink_ppDiff">1.40900004532168</data>
+      <data key="e_sink_diffSize">11</data>
+      <data key="e_deltaP">1.40900004532168</data>
+      <data key="e_intersectionSize">1</data>
+      <data key="e_pIntersection">0.00824810293632483</data>
+      <data key="e_ppIntersection">2.08364592769557</data>
+      <data key="e_jaccard">0.0555555555555556</data>
+      <data key="e_significantJaccard">0.0555555555555556</data>
+      <data key="e_discardSource">false</data>
+      <data key="e_discardSink">false</data>
+    </edge>
+  </graph>
+</graphml>
