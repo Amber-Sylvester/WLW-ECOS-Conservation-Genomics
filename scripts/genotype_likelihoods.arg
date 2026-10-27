@@ -1,0 +1,21 @@
+	-> angsd version: 0.941-28-g669af9a (htslib: 1.24-104-ga713d15c) build(Oct 22 2026 11:01:07)
+	-> /Users/ambersylvester/angsd/angsd -bam bam.filelist -GL 1 -out genotype_likelihoods -doMaf 2 -SNP_pval 1e-2 -doMajorMinor 1 
+	-> Thu Oct 22 12:55:06 2026
+----------------
+multiReader.cpp:
+	-nLines	50	(Number of lines to read)
+	-beagle	(null)	(Beagle Filename (can be .gz))
+	-bgen	(null)	(Bgen Filename)
+	-vcf-GL	(null)	(vcf Filename (can be bcf compressed or uncompressed))
+	-vcf-PL	(null)	(vcf Filename (can be bcf compressed or uncompressed))
+	-vcf-GP	(null)	(vcf Filename (can be bcf compressed or uncompressed))(*not used)
+	-glf	(null)	(glf Filename (can be .gz))
+	-pileup	(null)	(pileup Filename (can be .gz))
+	-intName 1	(Assume First column is chr_position)
+	-isSim	0	(Simulated data assumes ancestral is A)
+	-nInd	0		(Number of individuals)
+	-minQ	13	(minimum base quality; only used in pileupreader)
+	-fai	(null)	(fai file)
+	-minQ	13	(minimum base quality; only used in pileupreader)
+----------------
+multiReader.cpp:

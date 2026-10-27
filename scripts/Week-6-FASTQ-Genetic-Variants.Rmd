@@ -1,0 +1,130 @@
+---
+title: "Week-6-FASTQ-Genetic-Variants"
+output: html_notebook
+---
+```{r}
+download.file(
+  "https://raw.githubusercontent.com/BayLab/MarineGenomicsData/main/week3_quarter.tar.gz",
+  destfile = "Week-6-Data.tar.gz",
+  mode = "wb"
+)
+```
+```{r}
+untar("Week-6-Data.tar.gz", exdir = "Week-6-Data")
+```
+```{r}
+Sys.which("fastqc")
+list.files(pattern = "\\.tiny\\.fastq\\.gz$")
+```
+```{r}
+system2("fastqc", "SRR6805880.tiny.fastq.gz")
+```
+```{r}
+fastq_files <- list.files(
+  pattern = "^SRR680588.*\\.tiny\\.fastq\\.gz$"
+)
+
+for (f in fastq_files) {
+  base <- sub("\\.tiny\\.fastq\\.gz$", "", f)
+
+  output <- paste0(base, ".tiny_trimmed.fastq.gz")
+
+  system2("cutadapt", args = c(
+    "-g", "TGCAG",
+    "-o", output,
+    f
+  ))
+}
+```
+```{r}
+system2("bowtie2-build", c(
+  "Ppar_tinygenome.fna",
+  "Ppar_tinygenome"
+))
+```
+```{r}
+trimmed_files <- list.files(
+  pattern = "^SRR680588.*\\.tiny_trimmed\\.fastq\\.gz$"
+)
+
+for (f in trimmed_files) {
+  base <- sub("\\.tiny_trimmed\\.fastq\\.gz$", "", f)
+  output <- paste0(base, ".sam")
+
+  cat("Mapping sample:", base, "\n")
+
+  system2("bowtie2", args = c(
+    "-x", "Ppar_tinygenome",
+    "-U", f,
+    "-S", output
+  ))
+}
+```
+```{r}
+sam_files <- list.files(pattern = "^SRR680588.*\\.sam$")
+length(sam_files)
+sam_files
+```
+```{r}
+sam_files <- list.files(pattern = "^SRR680588.*\\.sam$")
+
+for (f in sam_files) {
+  base <- sub("\\.sam$", "", f)
+  output <- paste0(base, ".bam")
+
+  cat("Converting:", f, "\n")
+
+  system(
+    paste(
+      shQuote(Sys.which("samtools")),
+      "view -bh",
+      shQuote(f),
+      "|",
+      shQuote(Sys.which("samtools")),
+      "sort -o",
+      shQuote(output),
+      "-"
+    )
+  )
+}
+```
+```{r}
+bam_files <- list.files(pattern = "^SRR680588.*\\.bam$")
+
+length(bam_files)
+bam_files
+```
+```{r}
+bam_files <- list.files(pattern = "^SRR680588.*\\.bam$")
+
+writeLines(bam_files, "bam.filelist")
+```
+```{r}
+readLines("bam.filelist")
+```
+```{r}
+angsd_path <- path.expand("~/angsd/angsd")
+
+system2(angsd_path, args = c(
+  "-bam", "bam.filelist",
+  "-GL", "1",
+  "-out", "genotype_likelihoods",
+  "-doMaf", "2",
+  "-SNP_pval", "1e-2",
+  "-doMajorMinor", "1"
+))
+```
+```{r}
+list.files(pattern = "^genotype_likelihoods")
+```
+```{r}
+maf_data <- read.table(
+  gzfile("genotype_likelihoods.mafs.gz"),
+  header = TRUE
+)
+
+head(maf_data)
+```
+
+
+
