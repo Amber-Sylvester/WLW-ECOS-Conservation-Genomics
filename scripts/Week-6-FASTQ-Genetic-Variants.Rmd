@@ -3,6 +3,11 @@ title: "Week-6-FASTQ-Genetic-Variants"
 output: html_notebook
 ---
 ```{r}
+# Set project directory
+setwd("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/data/Week-6-Data/MarineGenomics/week4")
+```
+
+```{r}
 download.file(
   "https://raw.githubusercontent.com/BayLab/MarineGenomicsData/main/week3_quarter.tar.gz",
   destfile = "Week-6-Data.tar.gz",
@@ -119,12 +124,13 @@ list.files(pattern = "^genotype_likelihoods")
 ```
 ```{r}
 maf_data <- read.table(
-  gzfile("genotype_likelihoods.mafs.gz"),
+  gzfile("../data/Week-6-Data/MarineGenomics/week4/genotype_likelihoods.mafs.gz"),
   header = TRUE
 )
 
 head(maf_data)
 ```
+
 
 
 
