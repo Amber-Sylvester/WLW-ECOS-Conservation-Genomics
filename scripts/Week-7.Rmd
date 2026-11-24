@@ -7,7 +7,8 @@ library(tidyverse)
 library(viridis)
 ```
 ```{r}
-R1 <- read_lines("data/Battle_Creek_01_chinook_R1.fq.gz") %>%
+R1 <- read_lines(here::here(
+  "data", "Week-7-Data", "data", "Battle_Creek_01_chinook_R1.fq.gz")) %>%
   matrix(ncol = 4, byrow = TRUE) %>%
   .[,-3]
 
@@ -58,30 +59,50 @@ R1_sepq <- R1_sep %>%
 ```
 
 ```{r}
-ggplot(R1_sepq, aes(x = mean_qual)) +
+mean_quality_histogram<- ggplot(R1_sepq, aes(x = mean_qual)) +
   geom_histogram(binwidth = 1)
 ```
-
 ```{r}
-ggplot(R1_sepq, aes(x = x)) +
-  geom_histogram(bins = 500)
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/mean_quality_histogram.pdf",mean_quality_histogram)
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/mean_quality_histogram.png",mean_quality_histogram)
 ```
 
 ```{r}
-ggplot(R1_sepq, aes(x = y)) +
+x_coordinate_histogram<- ggplot(R1_sepq, aes(x = x)) +
+  geom_histogram(bins = 500)
+```
+```{r}
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/x_coordinate_histogram.pdf",x_coordinate_histogram)
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/x_coordinate_histogram.png",x_coordinate_histogram)
+```
+
+```{r}
+y_coordinate_histogram<- ggplot(R1_sepq, aes(x = y)) +
   geom_histogram(bins = 500) +
   coord_flip()
 ```
-
 ```{r}
-ggplot(R1_sepq, aes(x = x, y = y)) +
-  geom_hex(bins = 100) +
-  scale_fill_viridis_c()
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/y_coordinate_histogram.pdf",y_coordinate_histogram)
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/y_coordinate_histogram.png",y_coordinate_histogram)
 ```
 
 ```{r}
-ggplot(R1_sepq, aes(x = x, y = y, z = mean_qual)) +
+spatial_read_distribution<- ggplot(R1_sepq, aes(x = x, y = y)) +
+  geom_hex(bins = 100) +
+  scale_fill_viridis_c()
+```
+```{r}
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/spatial_read_distribution.pdf",spatial_read_distribution)
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/spatial_read_distribution.png",spatial_read_distribution)
+```
+
+```{r}
+spatial_quality_distribution<- ggplot(R1_sepq, aes(x = x, y = y, z = mean_qual)) +
   stat_summary_hex(bins = 100) +
   scale_fill_viridis_c()
+```
+```{r}
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/spatial_quality_distribution.pdf",spatial_quality_distribution)
+ggsave("~/Desktop/Fellowship/WLW-ECOS-Conservation-Genomics/Figures/Week-7-Figures/spatial_quality_distribution.png",spatial_quality_distribution)
 ```
 
